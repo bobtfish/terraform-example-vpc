@@ -10,7 +10,7 @@ gitupdate:
 	for i in $$(ls .terraform/modules/); do cd ".terraform/modules/$$i"; git pull --rebase origin master; cd ../../../; done
 
 sshnat:
-	ssh -A -i ../id_rsa ubuntu@$$(terraform output nat-public-ip)
+	ssh -A -i ../id_rsa ubuntu@$$(terraform output nat_public_ip)
 
 clean:
 	rm -fr .terraform variables.tf.json
