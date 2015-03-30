@@ -4,6 +4,9 @@ output "region" {
 output "account" {
   value = "${var.account}"
 }
+output "networkprefix" {
+  value = "${var.networkprefix}"
+}
 output "primary-az" {
   value = "${module.vpc.primary-az}"
 }
