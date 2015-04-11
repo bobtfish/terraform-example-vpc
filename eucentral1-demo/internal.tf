@@ -1,10 +1,8 @@
 module "ami" {
-  source = "github.com/terraform-community-modules/tf_aws_ubuntu_ami"
+  source = "github.com/terraform-community-modules/tf_aws_ubuntu_ami/ebs"
   region = "${var.region}"
   distribution = "trusty"
-  architecture = "amd64"
-  virttype = "hvm"
-  storagetype = "instance-store"
+  instance_type = "t2.micro"
 }
 
 resource "aws_instance" "internal" {
