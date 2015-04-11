@@ -10,29 +10,17 @@ output "account" {
 output "networkprefix" {
   value = "${var.networkprefix}"
 }
-output "primary-az" {
-  value = "${module.vpc.primary-az}"
+output "azs" {
+  value = "${module.vpc.azs}"
 }
-output "secondary-az" {
-  value = "${module.vpc.secondary-az}"
+output "frontsubnets" {
+  value = "${module.vpc.frontsubnets}"
 }
-output "primary-az-frontsubnet" {
-  value = "${module.vpc.primary-az-frontsubnet}"
+output "dedicatedsubnets" {
+    value = "${module.vpc.dedicatedsubnets}"
 }
-output "primary-az-dedicatedsubnet" {
-    value = "${module.vpc.primary-az-dedicatedsubnet}"
-}
-output "primary-az-ephemeralsubnet" {
-    value = "${module.vpc.primary-az-ephemeralsubnet}"
-}
-output "secondary-az-frontsubnet" {
-    value = "${module.vpc.secondary-az-frontsubnet}"
-}
-output "secondary-az-dedicatedsubnet" {
-    value = "${module.vpc.secondary-az-dedicatedsubnet}"
-}
-output "secondary-az-ephemeralsubnet" {
-    value = "${module.vpc.secondary-az-ephemeralsubnet}"
+output "ephemeralsubnets" {
+    value = "${module.vpc.ephemeralsubnets}"
 }
 output "public-routetable" {
     value = "${module.vpc.public-routetable}"
@@ -58,13 +46,13 @@ output "default_security_group_id" {
 output "security_group_allow_all" {
     value = "${module.vpc.security_group_allow_all}"
 }
-output "nat_instance" {
-    value = "${module.vpc.nat_instance}"
+output "nat_instances" {
+    value = "${module.vpc.nat_instances}"
 }
-output "nat_public_ip" {
-    value = "${module.vpc.nat_public_ip}"
+output "nat_public_ips" {
+    value = "${module.vpc.nat_public_ips}"
 }
-output "nat_private_ip" {
-    value = "${module.vpc.nat_private_ip}"
+output "nat_private_ips" {
+    value = "${module.vpc.nat_private_ips}"
 }
 
