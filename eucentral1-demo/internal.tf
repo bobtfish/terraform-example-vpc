@@ -9,7 +9,7 @@ module "ami" {
 
 resource "aws_instance" "internal" {
     ami = "${module.ami.ami_id}"
-    instance_type = "m3.large"
+    instance_type = "t2.micro"
     tags {
         Name = "internal-primary"
     }
