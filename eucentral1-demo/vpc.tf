@@ -10,5 +10,6 @@ module "vpc" {
     networkprefix = "${var.networkprefix}"
     aws_key_name = "${aws_key_pair.deployer.key_name}"
     aws_key_location = "../id_rsa"
+    nat_instances = "1"
 }
 
