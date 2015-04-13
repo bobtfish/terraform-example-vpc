@@ -8,6 +8,7 @@ module "ami" {
 resource "aws_instance" "internal" {
     ami = "${module.ami.ami_id}"
     instance_type = "t2.micro"
+    iam_instance_profile = "describe-instances"
     tags {
         Name = "internal-primary"
     }
