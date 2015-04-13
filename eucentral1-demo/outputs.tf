@@ -55,4 +55,3 @@ output "nat_public_ips" {
 output "nat_private_ips" {
     value = "${module.vpc.nat_private_ips}"
 }
-
