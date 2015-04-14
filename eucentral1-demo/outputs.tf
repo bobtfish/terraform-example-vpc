@@ -55,3 +55,6 @@ output "nat_public_ips" {
 output "nat_private_ips" {
     value = "${module.vpc.nat_private_ips}"
 }
+output "puppetmaster_private_ip" {
+    value = "${module.puppetmaster.private_ip}"
+}

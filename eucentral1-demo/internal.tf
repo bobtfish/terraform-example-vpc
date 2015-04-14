@@ -7,6 +7,5 @@ module "puppetmaster" {
   subnet_id = "${element(split(\",\", module.vpc.dedicatedsubnets), 0)}"
   security_group = "${module.vpc.security_group_allow_all}"
   repository = "https://github.com/bobtfish/terraform-puppet.git"
-    user_data = "${replace(file(\"${path.module}/internal.conf\"), \"__NETWORKPREFIX__\", \"${var.networkprefix}\")}"
 }
 
