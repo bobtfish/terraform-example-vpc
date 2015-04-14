@@ -58,3 +58,7 @@ output "nat_private_ips" {
 output "puppetmaster_private_ip" {
     value = "${module.puppetmaster.private_ip}"
 }
+output "puppet-client_private_ip" {
+    value = "${module.puppet-client.private_ip}"
+}
+
