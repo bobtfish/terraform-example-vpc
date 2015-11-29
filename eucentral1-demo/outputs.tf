@@ -10,8 +10,8 @@ output "account" {
 output "networkprefix" {
   value = "${var.networkprefix}"
 }
-output "azs" {
-  value = "${module.vpc.azs}"
+output "az_list" {
+  value = "${module.vpc.az_list}"
 }
 output "frontsubnets" {
   value = "${module.vpc.frontsubnets}"
